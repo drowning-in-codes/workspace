@@ -1,7 +1,7 @@
 import Button from './myButton'
 import Page from "./mysection";
 import "./styles.css";
-
+import { AdminPanel,LoginForm } from './panel';
 
 
 const Myp = ({props})=>{
@@ -32,8 +32,14 @@ export default function App() {
     ]
       
   }
+  const islogged = True;
   return (
     <div className="App">
+    {
+      islogged ?
+      <AdminPanel/> :
+      <LoginForm/>
+    }
     <Button info={info} style={{borderRadius: 12+"px",borderColor: "red",backgroundColor: "yellow"}} >124</Button>
       <h1>Hello CodeSandbofafdasffex</h1>
       <h2>Start editing to see some magic happen!</h2>
